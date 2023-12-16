@@ -1,9 +1,85 @@
-.card {
-    max-width: 345px;
-    margin-bottom: 2px;
-    transition: background-color 0.3s ease;
+.about-card-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-.card:hover {
-    background-color: lightblue;
+.about-card {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.customMargin{
+    margin-left: 3rem;
+}
+
+.about-card .about-front-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.about-card .about-front-content p {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 1;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+.about-card .about-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    color: #e8e8e8;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translateX(-96%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.about-card .about-content .about-heading {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-card:hover .about-content {
+    transform: translateY(0);
+}
+
+.about-card:hover .about-front-content {
+    transform: translateX(-30%);
+}
+
+.about-card:hover .about-front-content p {
+    opacity: 0;
+}
+
+.pricing-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This ensures the container takes the full height of the viewport */
 }

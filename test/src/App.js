@@ -7,23 +7,16 @@ import Hero from "./Components/Hero/Hero";
 function App() {
     return (
         <>
-            <NavBar></NavBar>
+            <NavBar/>
 
+            <Hero/>
 
-            <Hero></Hero>
+            <PricingCards/>
 
-
-            <PricingCards></PricingCards>
-
-            <Gallery></Gallery>
-
-
-
+            <Gallery/>
 
             <Footer/>
         </>
-
-
     );
 }
 

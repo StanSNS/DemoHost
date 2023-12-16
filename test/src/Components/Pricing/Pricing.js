@@ -1,10 +1,6 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import {CardActionArea, Grid} from '@mui/material';
-import Container from "@mui/material/Container";
+import {Grid} from '@mui/material';
 import "./Pricing.css"
 
 const dummyData = [
@@ -39,37 +35,45 @@ const dummyData = [
         description: 'Description for Card 6',
     },
 ];
+// ... (import statements and other code)
+
 export default function PricingCards() {
     return (
         <>
-            <h1 className="text-center ">Pricing</h1>
+            <h1 className="text-center mt-5">Pricing</h1>
 
-            <Container className="mt-5"  sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Grid container spacing={2}>
+
+            <div className="container">
+                <Grid container spacing={3} center>
                     {dummyData.map((data, index) => (
                         <Grid item key={index} xs={12} sm={6} md={4}>
-                            <Card className="card">
-                                <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        height="140"
-                                        image={data.image}
-                                        alt={data.title}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {data.title}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {data.description}
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
+                            <div className="about-card-container mt-4 customMargin ">
+                                <div className="about-card">
+
+                                    <div className="about-front-content">
+                                        <div className="text-center mt-2">
+                                            <p>HSK 1</p>
+                                        </div>
+
+
+                                        <div className="image-container">
+                                            <CardMedia component="img" height="180" image={data.image}
+                                                       alt={data.title}/>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div className="about-content">
+                                        <p className="about-heading">{data.title}</p>
+                                        <p>{data.description}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </Grid>
                     ))}
                 </Grid>
-            </Container>
+            </div>
         </>
 
     );
