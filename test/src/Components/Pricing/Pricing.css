@@ -1,0 +1,9 @@
+.card {
+    max-width: 345px;
+    margin-bottom: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: lightblue;
+}

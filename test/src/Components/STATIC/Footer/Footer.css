@@ -1,0 +1,65 @@
+ul, li, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer {
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    text-align: center;
+}
+
+.border_bo1 a {
+    color: black;
+}
+
+.firstCol p {
+    color: black;
+}
+
+.removeLinkBorder{
+    text-decoration: none;
+}
+
+
+.firstCol {
+    text-align: left;
+    display: flex;
+    width: 150px;
+    color: black;
+}
+
+.infoma {
+    display: block;
+}
+
+.infoma h3 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+.infoma ul li {
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer ul.conta {
+    padding-top: 2px;
+}
+
+.footer ul.conta li a {
+    margin-left: 15px;
+}
+
+
+
+.legal {
+    color: black;
+}
+
+.heart {
+    color: red;
+}
