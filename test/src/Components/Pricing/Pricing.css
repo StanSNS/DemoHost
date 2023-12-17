@@ -23,14 +23,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .about-card .about-front-content p {
     font-size: 32px;
     font-weight: 700;
     opacity: 1;
-    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -38,6 +38,7 @@
 }
 
 .about-card .about-content {
+    pointer-events: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -49,12 +50,11 @@
     justify-content: center;
     text-align: center;
     gap: 10px;
-    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
     color: #e8e8e8;
     padding: 20px;
     line-height: 1.5;
     border-radius: 5px;
-    pointer-events: none;
     transform: translateX(-96%);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
@@ -81,5 +81,73 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* This ensures the container takes the full height of the viewport */
+    height: 100vh;
 }
+
+
+
+
+
+
+
+
+.InfoCardButton {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.InfoCardButton:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.InfoCardButtontype1::after {
+    content: "Thanks";
+    height: 50px;
+    width: 150px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.InfoCardButtontype1::before {
+    content: "Hover Me";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.InfoCardButtontype1:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.InfoCardButtontype1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
